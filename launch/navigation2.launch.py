@@ -27,13 +27,13 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
-    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
+    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     map_dir = LaunchConfiguration(
         'map',
         default=os.path.join(
             get_package_share_directory('raspicat_navigation2'),
             'map',
-            'map.yaml'))
+            'map_tsudanuma_2_19.yaml'))
 
     param_file_name = 'raspicat.yaml'
     param_dir = LaunchConfiguration(

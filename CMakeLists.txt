@@ -29,8 +29,9 @@ endif()
 
 ament_auto_package(
   INSTALL_TO_SHARE
-  param
   launch
   map
+  param
   rviz
+  urdf
 )
