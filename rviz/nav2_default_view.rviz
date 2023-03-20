@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /TF1/Frames1
         - /TF1/Tree1
+        - /LaserScan1
       Splitter Ratio: 0.5833333134651184
     Tree Height: 458
   - Class: rviz_common/Selection
@@ -74,13 +75,68 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        base_footprint:
+          Value: true
+        base_link:
+          Value: true
+        camera_color_frame:
+          Value: true
+        camera_color_optical_frame:
+          Value: true
+        camera_depth_frame:
+          Value: true
+        camera_depth_optical_frame:
+          Value: true
+        camera_link:
+          Value: true
+        imu_link:
+          Value: true
+        left_front_usensor_link:
+          Value: true
+        left_side_usensor_link:
+          Value: true
+        lidar_link:
+          Value: true
+        map:
+          Value: true
+        odom:
+          Value: true
+        right_front_usensor_link:
+          Value: true
+        right_side_usensor_link:
+          Value: true
+        urg_mount_link:
+          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        {}
+        map:
+          odom:
+            base_footprint:
+              base_link:
+                camera_link:
+                  camera_color_frame:
+                    camera_color_optical_frame:
+                      {}
+                  camera_depth_frame:
+                    camera_depth_optical_frame:
+                      {}
+                imu_link:
+                  {}
+                left_front_usensor_link:
+                  {}
+                left_side_usensor_link:
+                  {}
+                right_front_usensor_link:
+                  {}
+                right_side_usensor_link:
+                  {}
+                urg_mount_link:
+                  lidar_link:
+                    {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -92,8 +148,8 @@ Visualization Manager:
       Axis: Z
       Channel Name: intensity
       Class: rviz_default_plugins/LaserScan
-      Color: 255; 255; 255
-      Color Transformer: Intensity
+      Color: 237; 51; 59
+      Color Transformer: FlatColor
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
@@ -104,7 +160,7 @@ Visualization Manager:
       Name: LaserScan
       Position Transformer: XYZ
       Selectable: true
-      Size (Pixels): 3
+      Size (Pixels): 10
       Size (m): 0.009999999776482582
       Style: Points
       Topic:
@@ -532,11 +588,11 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 34.95878601074219
+      Scale: 15.198719024658203
       Target Frame: <Fixed Frame>
       Value: TopDownOrtho (rviz_default_plugins)
-      X: 26.982114791870117
-      Y: 7.939611434936523
+      X: -30.143651962280273
+      Y: -4.152978897094727
     Saved: ~
 Window Geometry:
   Displays:
