@@ -274,6 +274,7 @@ global_costmap:
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
         map_subscribe_transient_local: True
+        map_topic: "/navigation_map"
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 1.0
@@ -286,10 +287,16 @@ global_costmap:
     ros__parameters:
       use_sim_time: False
 
-map_server:
+navigation_map_server:
   ros__parameters:
     use_sim_time: False
-    yaml_filename: "map.yaml"
+    yaml_filename: "/home/kenzo-fujisaki/catkin_ws/src/raspicat_navigation2/map/map_tsudanuma.yaml"
+
+localization_map_server:
+  ros__parameters:
+    use_sim_time: False
+    yaml_filename: "/home/kenzo-fujisaki/catkin_ws/src/raspicat_navigation2/map/localization_map.yaml"
+
 
 map_saver:
   ros__parameters:
